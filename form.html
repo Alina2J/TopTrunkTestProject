@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание объявления | Тут Эвакуатор</title>
+
+    <!-- css стили -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <div class="logo">
+          <img width="112" height="112" src="img/logo.svg" alt="Логотип сайта «Тут Эвакуатор»">
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#">О проекте</a></li>
+          <li class="nav-item"><a href="#">Контакты</a></li>
+        </ul>
+        <div class="add-advertisement">
+          <a href="#">Добавить объявление</a>
+        </div>
+      </nav>
+    </header>
+    <main class="form-page">
+      <div class="top-banner">
+        <h1>Создание объявления</h1>
+      </div>
+      <section class="notice-section">
+        <div class="container">
+          <div class="notice">
+            <img src="img/iconMoney.svg" alt="На мониторе изображена валюта">
+            <p>Заполните все поля формы на размещение своего объявления на сайте. <br>
+              Размещение объявления платное. Стоимость за одно объявление составляет <b>990 руб.</b>  <br>
+              Объявление будет опубликовано на сайте после оплаты и проверки модератором.</p>
+          </div>
+        </div>
+      </section>
+      <section class="form-section">
+        <div class="container">
+        <form action="" method="post" enctype="multipart/form-data">
+          <div class="form-main-section form-container">
+            <div class="form-item">
+              <label for="city" class="form-label">Выберете город</label>
+              <select class="form-select error-field" id="city" required>
+                <option selected disabled>Выберите...</option>
+                <option>Москва</option>
+              </select>
+              <div class="invalid-feedback">
+                Пожалуйста, выберите город.
+              </div>
+            </div>
+            <div class="form-item">
+              <label for="name" class="form-label">Ваше имя</label>
+              <input type="text" class="form-control" id="name" required>
+              <div class="valid-feedback">
+                Все хорошо!
+              </div>
+            </div>
+            <div class="form-item">
+              <label for="phone-number" class="form-label">Номер мобильного телефона</label>
+              <input type="tel" placeholder="+7 (999) 999 99 99" class="form-control" id="phone-number" required>
+              <div class="valid-feedback">
+                Все хорошо!
+              </div>
+            </div>
+            <div class="form-item">
+              <label for="phone-city-number" class="form-label">Номер городского телефона</label>
+              <input type="tel" placeholder="+7 (999) 999 99 99" class="form-control" id="phone-city-number" required>
+              <div class="valid-feedback">
+                Все хорошо!
+              </div>
+            </div>
+            <div class="form-item">
+              <label for="email" class="form-label">Ваш email</label>
+              <input type="email" placeholder="example@gmail.com" class="form-control error-field" id="email" required>
+              <div class="invalid-feedback">
+                Поле email является обязательным.
+              </div>
+            </div>
+            <div class="form-item">
+              <label for="address" class="form-label">Адрес стоянки эвакуатора</label>
+              <input type="text" class="form-control" id="address" required>
+              <div class="valid-feedback">
+                Все хорошо!
+              </div>
+            </div>
+          </div>
+          <h2 class="form-title left-right-line-header">Информация</h2>
+          <div class="form-info-section form-container">
+            <div class="form-item">
+              <label for="title" class="form-label">Заголовок объявления</label>
+              <input type="text" placeholder="Не более 50 символов" class="form-control" id="title">
+              <div class="valid-feedback">
+                Все хорошо!
+              </div>
+            </div>
+            <div class="form-item">
+              <label for="description" class="form-label">Описание объявления</label>
+              <textarea placeholder="Не более 50 символов" class="form-control error-field" name="description" id="description"></textarea>
+              <div class="invalid-feedback">
+                Пожалуйста, введите описание в текстовое поле.
+              </div>
+            </div>
+          </div>
+          <h2 class="form-title left-right-line-header">Цены</h2>
+          <div class="form-price-section form-container">
+            <div class="form-items">
+              <div class="form-item">
+                <label for="passenger-car" class="form-label">Легковые автомобили</label>
+                <input type="number" class="form-control error-field" id="passenger-car">
+                <div class="valid-feedback">
+                  Пожалуйста, введите цену.
+                </div>
+              </div>
+              <p>рублей</p>
+              <div class="form-item-cheak">
+                <input type="checkbox" class="form-check-input" id="passenger-car-cheakbox">
+                <label for="passenger-car-cheakbox" class="form-check-label">Услугу не оказываю</label>
+                <div class="valid-feedback">
+                  Все хорошо!
+                </div>
+              </div>
+            </div>
+            <div class="form-items">
+              <div class="form-item">
+                <label for="motortechnique" class="form-label">Мототехника</label>
+                <input type="number" class="form-control" id="motortechnique">
+                <div class="valid-feedback">
+                  Все хорошо!
+                </div>
+              </div>
+              <p>рублей</p>
+              <div class="form-item-cheak">
+                <input type="checkbox" class="form-check-input" id="motortechnique-cheakbox">
+                <label for="motortechnique-cheakbox" class="form-check-label">Услугу не оказываю</label>
+                <div class="valid-feedback">
+                  Все хорошо!
+                </div>
+              </div>
+            </div>
+            <div class="form-items">
+              <div class="form-item">
+                <label for="suv" class="form-label">Внедорожник</label>
+                <input type="number" class="form-control" id="suv">
+                <div class="valid-feedback">
+                  Все хорошо!
+                </div>
+              </div>
+              <p>рублей</p>
+              <div class="form-item-cheak">
+                <input type="checkbox" class="form-check-input" id="suv-cheakbox">
+                <label for="suv-cheakbox" class="form-check-label">Услугу не оказываю</label>
+                <div class="valid-feedback">
+                  Все хорошо!
+                </div>
+              </div>
+            </div>
+            <div class="form-items">
+              <div class="form-item">
+                <label for="minibus" class="form-label">Микроавтобус</label>
+                <input type="number" class="form-control" id="minibusr">
+                <div class="valid-feedback">
+                  Все хорошо!
+                </div>
+              </div>
+              <p>рублей</p>
+              <div class="form-item-cheak">
+                <input type="checkbox" class="form-check-input" id="minibus-cheakbox">
+                <label for="minibus-cheakbox" class="form-check-label">Услугу не оказываю</label>
+                <div class="valid-feedback">
+                  Все хорошо!
+                </div>
+              </div>
+            </div>
+            <div class="form-items">
+              <div class="form-item">
+                <label for="country-fare" class="form-label">Загородный тариф</label>
+                <input type="number" class="form-control" id="country-fare">
+                <div class="valid-feedback">
+                  Все хорошо!
+                </div>
+              </div>
+              <p>рублей</p>
+              <div class="form-item-cheak">
+                <input type="checkbox" class="form-check-input" id="country-fare-cheakbox">
+                <label for="country-fare-cheakbox" class="form-check-label">Услугу не оказываю</label>
+                <div class="valid-feedback">
+                  Все хорошо!
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="form-title left-right-line-header">Фото</h2>
+          <div class="form-image-section form-container"> 
+            <div class="form-item">
+              <p>Прикрепите фотографию к объявлению</p>
+              <label for="image" class="form-control-file">
+                <input type="file" id="image">
+                <span>Загрузить</span>
+              </label>
+              <div class="valid-feedback">
+                Все хорошо!
+              </div>
+            </div>
+            <div class="form-item">
+              <input type="checkbox" class="form-check-input" id="cheak">
+              <label for="cheak" class="form-check-label">
+                Я соглашаюсь с правилами использования сервиса, а также с передачей и обработкой 
+                моих данных в evarus.ru. Я подтверждаю своё совершеннолетие и ответственность за размещение.
+              </label>
+              <div class="valid-feedback">
+                Все хорошо!
+              </div>
+                <button type="submit" class="form-button">Продолжить</button>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="logo">
+                <img width="112" height="112" src="img/logo.svg" alt="Логотип сайта «Тут Эвакуатор»">
+            </div>
+            <ul class="nav-list-footer">
+                <li><a href="#">Вызвать эвакуатор</a></li>
+                <li><a href="#">Добавить эвакуатор на сайт</a></li>
+                <li><a href="#">Помощь</a></li>
+                <li><a href="#">Правила оплаты</a></li>
+                <li><a href="#">Защита персональных данных</a></li>
+            </ul>
+        </div>
+    </footer>
+  </body>
+</html>
