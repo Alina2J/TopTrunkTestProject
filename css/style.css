@@ -2013,11 +2013,13 @@ select::-ms-expand {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 100%;
 }
 
 .form-label {
   font-size: 22px;
   color: #4a585e;
+  margin: 0;
 }
 
 .form-select {
@@ -2130,30 +2132,50 @@ input.form-control {
 .form-price-section {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 12px;
   margin-bottom: 53px;
   margin-top: 53px;
+  justify-content: center;
 }
 
-.form-price-section .form-items {
+.form-price-section p {
+  margin-top: 14px;
+}
+
+.form-price-section p:first-child {
+  margin-top: 0;
+}
+
+.form-group {
   display: flex;
-  align-items: end;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.form-items p {
+.form-group .form-item-cheak {
   margin: 0;
-  font-size: 22px;
-  margin-left: 16px;
-  margin-bottom: 15px;
-  color: #4a585e;
+  margin: auto 0;
 }
 
-.form-price-section .form-items .form-item-cheak {
+.form-group .form-item {
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-group .form-item input{
+  width: 60%;
+}
+
+.form-group .form-item{
+  width:60%;
+}
+
+.form-price-section .form-item-cheak {
   margin-left: auto;
   margin-bottom: 15px;
 }
 
-.form-price-section .form-items .form-item-cheak label {
+.form-price-section .form-item-cheak label {
   color: #4a585e;
   font-size: 22px;
 }
@@ -2260,26 +2282,9 @@ input.form-control {
   .notice p {
     font-size: 20px;
   }
-
-  .form-price-section {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .form-price-section .form-items {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    gap: 10px;
-  }
-
   .form-items p {
     margin: 0;
     margin-top: 5px;
-  }
-
-  .form-price-section .form-items .form-item-cheak {
-    margin: 0 auto;
   }
 
   .form-image-section {
@@ -2315,12 +2320,47 @@ input.form-control {
     height: auto;
   }
 
+  .form-group .form-item input{
+    width: 90%;
+  }
+  
+  .form-group .form-item{
+    width:100%;
+  }
+
+  .form-group {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
   .form-section p,
   .form-section li {
     font-size: 15px;
   }
 
+  .form-price-section p,
+  .form-label,
+  .form-price-section .form-item-cheak label {
+    font-size: 20px;
+  }
+
+  select:not([multiple]) {
+    background-position: calc(100% - 1em) 1em;
+  }
+
+
   .form-section h2 {
+    font-size: 20px;
+  }
+
+  input::placeholder, 
+  textarea::placeholder,
+  .form-select {
+    font-size: 18px;
+  }
+
+  .form-image-section .form-item p,
+  .form-image-section label {
     font-size: 20px;
   }
 }
@@ -2338,15 +2378,5 @@ input.form-control {
 }
 
 @media (max-width: 320px) {
-  .form-price-section .form-items {
-    display: flex;
-    flex-direction: column;
-    object-fit: cover;
-    align-items: center;
-    max-width: 256px;
-  }
 
-  .form-item {
-    max-width: 256px;
-  }
 }
